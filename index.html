@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Page Web Résponsive réalisée par HTML et CSS</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <h2 class="logo"><a href="#">Ma page</a></h2>
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" id="hamburger-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+            <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </label>
+        <ul class="links">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="sommes.html">Qui sommes nous ?</a></li>
+          <li><a href="sevice.html">Nos Services</a></li>
+          <li><a href="references.html">Références</a></li>
+          <li><a href="contacter.html">Nous Contacter</a></li>
+        </ul>
+        <div class="buttons">
+          <a href="#" class="signin">Sign In</a>
+          <a href="#" class="signup">Sign Up</a>
+        </div>
+      </nav>
+    </header>
+    <section class="hero-section">
+      <div class="hero">
+        <h2>Développement d'applications mobiles</h2>
+        <p>
+          Nous vous proposons des applications 
+          qui répondent à vos besoin spécifiques ....
+        </p>
+        <div class="buttons">
+          <a href="contacter.html" class="join">Nous contacter</a>
+          <a href="sevice.html" class="learn">Plus d'information</a>
+        </div>
+      </div>
+      <div class="img">
+        <img src="img.png" alt="hero image" />
+      </div>
+    </section>
+  </body>
+</html>

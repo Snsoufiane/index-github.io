@@ -1,0 +1,196 @@
+/* Importing Google font - Open Sans
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
+ */
+* {
+  margin: 0; /* supprime les marges par défaut pour tous les éléments */
+  padding: 0;  /* supprime les espacements internes par défaut pour tous les éléments */
+  font-family: "Open Sans", sans-serif; /* la police globale */
+}
+
+body {
+  height: 100vh; /* hauteur */
+  width: 100%; /* largeur */
+  background: linear-gradient(to bottom, #175d69 23%, #330c43 95%);  /* applique un dégradé de haut en bas */ 
+}
+
+.header {
+  position: fixed; /* fixe l'en-tête en haut de la page */
+  left: 0; /* position en haut de la page */
+  width: 100%;  /* position sur le côté gauche de la page */
+}
+
+.navbar {
+  display: flex; /* dispose les éléments en ligne */
+  align-items: center; /* aligne les éléments verticalement au centre */
+  justify-content: space-between; /* espacement uniforme entre les elements */
+  max-width: 1200px; /* largeur maximale de la barre de navigation */
+  margin: 0 auto; /* centre horizontalement la barre de navigation */
+  padding: 20px 15px;  /* espacement interne en haut/bas et gauche/droite */
+}
+
+.navbar .logo a {
+  font-size: 1.8rem; /* taille du texte pour le logo */
+  text-decoration: none; /* supprime le soulignement du lien */
+  color: #fff; /* couleur blanche pour le texte */
+}
+
+.navbar .links {
+  display: flex; /* dispose les liens en ligne */
+  align-items: center; /* centre les liens verticalement */
+  list-style: none; /* supprime les puces des listes */
+  gap: 35px; /* espacement entre chaque lien */
+}
+
+.navbar .links a {
+  font-weight: 500; /* l'epaisseur du texte */
+  text-decoration: none; /* supprime le soulignement des liens */
+  color: #fff; /* couleur */
+  padding: 10px 0; /* espacement interne vertical */
+  transition: 0.2s ease; /* transition douce pour les changements */
+}
+
+.navbar .links a:hover {
+  color: #47b2e4; /* change la couleur au survol */
+}
+
+.navbar .buttons a {
+  text-decoration: none; /* supprime le soulignement */
+  color: #fff; /* couleur */
+  font-size: 1rem; /* taille du texte */
+  padding: 15px 0; /* espacement interne vertical */
+  transition: 0.2s ease; /* transition douce pour les effets */
+}
+
+.navbar .buttons a:not(:last-child) {
+  margin-right: 30px; /* espacement entre les boutons */
+}
+
+.navbar .buttons .signin:hover {
+  color: #47b2e4; /* change couleur */
+}
+
+.navbar .buttons .signup {
+  border: 1px solid #fff; /* Bordure blanche autour du bouton */
+  padding: 10px 20px; /* espacement interne */
+  border-radius: 0.375rem; /* coins arrondis */
+  text-align: center; /* centre le texte */
+  transition: 0.2s ease; /* transition douce */
+}
+
+.navbar .buttons .signup:hover {
+  background-color: #47b2e4; /* change la couleur de fond au survol */
+  color: #fff; /* couleur */
+}
+
+.hero-section {
+  display: flex; /* dispose les éléments en ligne */
+  justify-content: space-evenly; /* distribution uniforme avec espace entre */
+  align-items: center; /* centre les éléments verticalement */
+  height: 95vh; /* la hauteur de la fenêtre */
+  padding: 0 15px; /* espacement interne gauche et droite */
+  max-width: 1200px; /* largeur maximale de la section */
+  margin: 0 auto; /* centre la section */
+}
+
+.hero-section .hero {
+  max-width: 50%; /* largeur */
+  color: #fff; /* couleur */
+}
+
+.hero h2 {
+  font-size: 2.5rem; /* taille du titre */
+  margin-bottom: 20px; /* espacement en bas */
+}
+
+.hero p {
+  font-size: 1.2rem; /* taille du texte */
+  margin-bottom: 20px; /* espacement en bas */
+  color: #c9c7c7; /* couleur */
+}
+
+.hero-section .img img {
+  width: 517px; /* largeur de l'image */
+}
+
+.hero-section .buttons {
+  margin-top: 40px; /* espacement au-dessus des boutons */
+}
+
+.hero-section .buttons a {
+  text-decoration: none; /* supprime le soulignement */
+  color: #fff; /* couleur */
+  padding: 12px 24px; /* espacement interne des boutons */
+  border-radius: 0.375rem; /* coins arrondis */
+  font-weight: 600; /* taille texte */
+  transition: 0.2s ease; /* transition douce */
+  display: inline-block; /* chaque bouton s'affiche en ligne */
+}
+
+.hero-section .buttons a:not(:last-child) {
+  margin-right: 15px; /* espacement entre les boutons */
+}
+
+.buttons .join {
+  background-color: #47b2e4; /* couleur */
+}
+
+.hero-section .buttons .learn {
+  border: 1px solid #fff; /* bordure blanche autour du bouton */
+  border-radius: 0.375rem; /* coins arrondis */
+}
+
+.hero-section .buttons a:hover {
+  background-color: #47b2e4; /* change la couleur de fond au survol */
+}
+
+/* Hamburger menu styles */
+#menu-toggle {
+  display: none; /* cache l'input checkbox */
+}
+
+#hamburger-btn {
+  font-size: 1.8rem; /* taille de l'icône hamburger */
+  color: #fff; /* couleur */
+  cursor: pointer; /* change le curseur au survol */
+  display: none; /* cache le bouton par défaut */
+  order: 1; /* définit l'ordre d'affichage pour flexbox */
+}
+
+@media screen and (max-width: 1023px) {
+  .navbar .logo a {
+    font-size: 1.5rem; /* réduit la taille du logo sur petit écran */
+  }
+
+  .links {
+    position: fixed; /* position fixe pour le menu */
+    left: -100%; /* cache le menu hors de l'écran */
+    top: 75px; /* place le menu sous l'en-tête */
+    width: 100%; /* largeur de l'écran */
+    height: 100vh; /* hauteur de l'écran */
+    padding-top: 50px; /* espacement au-dessus */
+    background: #175d69; /* couleur */
+    flex-direction: column; /* les liens s'alignent en colonne */
+    transition: 0.3s ease; /* transition douce pour l'animation */
+  }
+
+  .navbar #menu-toggle:checked ~ .links {
+    left: 0; /* affiche le menu quand la checkbox est cochée */
+  }
+
+  .navbar #hamburger-btn {
+    display: block; /* affiche le bouton hamburger */
+  }
+
+  .header .buttons {
+    display: none; /* cache les boutons sur petit écran */
+  }
+
+  .hero-section .hero {
+    max-width: 100%; /* texte prend toute la largeur sur petit écran */
+    text-align: center; /* centre le texte */
+  }
+
+  .hero-section img {
+    display: none; /* cache l'image sur petit écran */
+  }
+}
